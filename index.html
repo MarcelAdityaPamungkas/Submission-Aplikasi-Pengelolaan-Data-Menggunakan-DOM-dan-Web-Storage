@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8" />
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0"/>
+        <title>GMAP Bookshelf Apps</title>
+        <link rel = "stylesheet" href = "styles.css"/>
+        <link rel = "preconnect" href = "https://fonts.gstatic.com"/>
+        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"/>
+        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap"/>
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    </head>
+    <body>
+        <header class = "judul">
+            <h1>GMAP Bookshelf Apps</h1>
+        </header>
+        <main>
+            <section class = "input_section">
+                <h1>Identitas Buku</h1>
+                <form id = "inputBuku">
+                    <div class = "input">
+                        <label for = "inputJudulBuku">Judul Buku</label>
+                        <input
+                            id = "inputJudulBuku"
+                            type = "text"
+                            placeholder = "Ketik Judul Buku Disini..."
+                            required
+                        />
+                    </div>
+                    <div class = "input">
+                        <label for = "inputPenulisBuku">Penulis Buku</label>
+                        <input
+                            id = "inputPenulisBuku"
+                            type = "text"
+                            placeholder = "Ketik Penulis Buku Disini..."
+                            required
+                        />
+                    </div>
+                    <div class = "input">
+                        <label for = "inputTahunBuku">Tahun Terbit Buku</label>
+                        <input
+                            id = "inputTahunBuku"
+                            type = "number"
+                            placeholder = "Ketik Tahun Terbit Buku Disini..."
+                            required
+                        />
+                    </div>
+                    <div class = "input_inline">
+                        <label for = "inputBukuSudahSelesai">Sudah selesai dibaca</label>
+                        <input id = "inputBukuSudahSelesai" type = "checkbox" />
+                    </div>
+                    <button id = "bookSubmit" type = "submit">
+                        Masukkan Buku ke Rak Buku
+                    </button>
+                </form>
+            </section>
+            <section class = "cari_section">
+                <h1>Cari Buku</h1>
+                <form id = "cariBuku">
+                    <input
+                        id = "cariJudulBuku"
+                        type = "text"
+                        placeholder = "Ketik Judul/Penulis Buku Disini..."
+                    />
+                    <button 
+                        id = "tombolCari" 
+                        type = "submit"
+                    ><i class = "fa-solid fa-magnifying-glass"></i> Cari</button>
+                </form>
+            </section>
+            <section class = "rak_section">
+                <h1>Rak Buku</h1>
+                <div class = "rak">
+                    <div class = "rak_buku">
+                        <h2>Belum selesai dibaca</h2>
+                        <div class = "listBukuBelumSelesai"></div>
+                    </div>
+                    <div class = "rak_buku">
+                        <h2>Sudah selesai dibaca</h2>
+                        <div class = "listBukuSudahSelesai"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Website ini dibuat oleh Marcel Aditya Pamungkas</p>
+        </footer>
+        <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src = "script.js"></script>
+    </body>
+</html>
